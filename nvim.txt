@@ -1,0 +1,35 @@
+set number
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set softtabstop=4
+set mouse=a
+set ignorecase
+set mouse=v
+syntax on
+set cursorline
+set ttyfast
+" set spell "
+call plug#begin("~/.vim/pluggged")
+
+Plug 'dracula/vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'https://github.com/preservim/nerdtree'
+Plug ''
+
+
+call plug#end()
+
+colorscheme dracula
+
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapsible="~"
+let g:python_highlight_all = 1
+
+nnoremap <C-f> :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-l> :UndotreeToggle<CR>
